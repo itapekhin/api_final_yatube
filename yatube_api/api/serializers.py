@@ -54,7 +54,7 @@ class FollowSerializer(serializers.ModelSerializer):
         return data
 
     class Meta:
-        fields='__all__'
+        fields = '__all__'
         model = Follow
         validators = [
             UniqueTogetherValidator(
