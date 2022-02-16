@@ -3,6 +3,7 @@ from rest_framework import permissions
 
 
 class IsAuthor(permissions.BasePermission):
+    
     def has_permission(self, request, view):
         if request.method in permissions.SAFE_METHODS:
             return True
@@ -17,4 +18,3 @@ class IsAuthor(permissions.BasePermission):
             return True
         else:
             raise PermissionDenied('Изменение чужого контента запрещено!')
-1
