@@ -1,0 +1,134 @@
+GET http://127.0.0.1:8000/cats/
+#Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNDc2NDkyLCJqdGkiOiI0ZGZiZWIwMTJmNWI0ODM5OWI2N2ZjYjFkMmQ3Yjk2MSIsInVzZXJfaWQiOjF9.tVfdA0eq3SJc8F7ekk8wdLCoPLOcey231Z6nntQXzmE
+###
+GET http://127.0.0.1:8000/api/v1/posts/33 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUyNTI1MjIzLCJqdGkiOiJmMzAxZWU0YmFkYzk0YmM5OTQ2ZTY3YzQ3ZWIyZjczNCIsInVzZXJfaWQiOjF9.ocHUgjoh8oXdI8Pw2C6rUF6kMGMqjfJYsHiPmMX2IY0
+#Authorization: Token b13c0cb60e5924861a6461b1102fbc89e0037191
+###
+GET http://127.0.0.1:8000/api/v1/follow/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUyNTI1MjIzLCJqdGkiOiJmMzAxZWU0YmFkYzk0YmM5OTQ2ZTY3YzQ3ZWIyZjczNCIsInVzZXJfaWQiOjF9.ocHUgjoh8oXdI8Pw2C6rUF6kMGMqjfJYsHiPmMX2IY0
+###
+GET  http://127.0.0.1:8000/api/v1/posts/4/comments/
+Authorization: Token b13c0cb60e5924861a6461b1102fbc89e0037191
+###
+POST  http://127.0.0.1:8000/api/v1/follow/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUyNTI1MjIzLCJqdGkiOiJmMzAxZWU0YmFkYzk0YmM5OTQ2ZTY3YzQ3ZWIyZjczNCIsInVzZXJfaWQiOjF9.ocHUgjoh8oXdI8Pw2C6rUF6kMGMqjfJYsHiPmMX2IY0
+
+{
+    "following": "1"
+}
+###
+POST  http://127.0.0.1:8000/api/v1/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "1",
+    "password": "Argentina@1995"
+}
+###
+#root
+#  "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0NDgzNTYyMywianRpIjoiNmQxMjc2ZmViODFkNDdjMDlhOTliYmY5YzMwYjE2MzIiLCJ1c2VyX2lkIjoxfQ.i_Uq4fa8E5FbUGgdnmWtVz_9xl1Qe7H8oEiDJ3viMUs",
+#  "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUyNTI1MjIzLCJqdGkiOiJmMzAxZWU0YmFkYzk0YmM5OTQ2ZTY3YzQ3ZWIyZjczNCIsInVzZXJfaWQiOjF9.ocHUgjoh8oXdI8Pw2C6rUF6kMGMqjfJYsHiPmMX2IY0"
+#1
+#  "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0NDkyMDA5NywianRpIjoiNDlhZjQyOWY3MDE4NGI1Y2E1OGY3Y2U4OTRiNTc4YjQiLCJ1c2VyX2lkIjoyfQ.ed-_u4NgcGbVGBadXHYzNhlQoTv-M9pnkmwTUetcp_s",
+#  "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUyNjA5Njk3LCJqdGkiOiI1NGM4Yzc0ZGZkNzA0ZDE3ODgxYTkzM2Y5MjNlN2NiZCIsInVzZXJfaWQiOjJ9.B5UOZyRdL752zbejqaUFGkixH_qTKrZZMArObGzfNsk"
+PUT   http://127.0.0.1:8000/api/v1/posts/4/comments/10/
+Content-Type: application/json
+Authorization: Token 3f7897f223eeb1e1f5c7242d907f290cf8930911
+
+{
+    "text": ",333d,,q"
+}
+###
+POST  http://127.0.0.1:8000/api-token-auth/
+Content-Type: application/json
+
+{
+    "username": "1",
+    "password": "Argentina@1995"
+}
+###"token": "b13c0cb60e5924861a6461b1102fbc89e0037191"
+###"token": "3f7897f223eeb1e1f5c7242d907f290cf8930911"
+###
+POST  http://127.0.0.1:8000/api/v1/posts/
+Content-Type: application/json
+
+{
+    "text": "fd",
+    "group": "leva"
+}
+###
+###
+POST  http://127.0.0.1:8000/api/v1/group/
+Content-Type: application/json
+Authorization: Token b13c0cb60e5924861a6461b1102fbc89e0037191
+
+{
+    "text": "fd",
+    "group": "leva"
+}
+###
+POST  http://127.0.0.1:8000/api/v1/group/
+Content-Type: application/json
+Authorization: Token b13c0cb60e5924861a6461b1102fbc89e0037191
+
+{
+    "title": "3",
+    "slug": "4",
+    "description": "Group 4"
+}
+###
+POST  http://127.0.0.1:8000/cats/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNDc2NTk0LCJqdGkiOiIxMzhiMTRmZjg5NWY0OTIxYThhZDQ0N2ExZDkwMDRiZSIsInVzZXJfaWQiOjJ9.2Hch9LVYjizbAXkOx0IHvLlM4XHehdxawgqdQxM1YXc
+
+{
+    "name": "White",
+    "color": "White",
+    "birth_year": 2020
+} 
+###
+POST  http://127.0.0.1:8000/auth/users/
+Content-Type: application/json
+
+{
+    "username": "ivan",
+    "password": "Argentina1995"
+}
+### Получение токена для юсера
+POST  http://127.0.0.1:8000/auth/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "user1",
+    "password": "!2345qwerty"
+}
+### root "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0MzQ3NjQ5MiwianRpIjoiMmRkYjY3YzdhNTRiNGI3Mjk1YzFmMTA4ZjUxNTdiM2YiLCJ1c2VyX2lkIjoxfQ.HhjL2Lm8E28T7optEWdbnRbbTIXfabK61OPWjfQA0dY",
+###  "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNDc2NDkyLCJqdGkiOiI0ZGZiZWIwMTJmNWI0ODM5OWI2N2ZjYjFkMmQ3Yjk2MSIsInVzZXJfaWQiOjF9.tVfdA0eq3SJc8F7ekk8wdLCoPLOcey231Z6nntQXzmE"
+### user1  "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0MzQ3NjU5NCwianRpIjoiNjY5N2NmOTA2OTQ1NGRjZTlmODBiNTE5ZGQxMjFmNGYiLCJ1c2VyX2lkIjoyfQ.Gq68c6NeRXK4PmUk6zfY5cscmgNmJe6Dj7m_hiN7SHw",
+###  "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNDc2NTk0LCJqdGkiOiIxMzhiMTRmZjg5NWY0OTIxYThhZDQ0N2ExZDkwMDRiZSIsInVzZXJfaWQiOjJ9.2Hch9LVYjizbAXkOx0IHvLlM4XHehdxawgqdQxM1YXc"
+###
+POST  http://127.0.0.1:8000/owners/
+Content-Type: application/json
+
+{
+    "first_name": "2",
+    "last_name": "2"
+}
+
+###
+POST  http://127.0.0.1:8000/cats/
+Content-Type: application/json
+
+{
+    "name": "1",
+    "color": "428B22",
+    "birth_year": 2020,
+    "owner": 1,
+    "achievements": [
+        {"name": "убил хозяйку"},
+        {"name": "разбил лицо мужу"}
+    ]
+}
