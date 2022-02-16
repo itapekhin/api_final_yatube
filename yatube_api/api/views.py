@@ -34,7 +34,7 @@ class CommentViewSet(UpdateDeleteViewSet, viewsets.ModelViewSet):
 
     def get_queryset(self):
         post_id = self.kwargs.get("post_id")
-        correct_post = get_object_or_404(Post, id=post_id)
+        get_object_or_404(Post, id=post_id)
         new_queryset = Comment.objects.filter(post=post_id)
         return new_queryset
 
