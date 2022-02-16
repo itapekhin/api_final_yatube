@@ -7,7 +7,6 @@ from rest_framework.permissions import (IsAuthenticated,
 from permission import IsAuthor
 from posts.models import Comment, Follow, Group, Post
 from utils import UpdateDeleteViewSet
-
 from .serializers import (CommentSerializer, FollowSerializer, GroupSerializer,
                           PostSerializer)
 
@@ -37,10 +36,7 @@ class CommentViewSet(UpdateDeleteViewSet, viewsets.ModelViewSet):
         post_id = self.kwargs.get("post_id")
         correct_post = get_object_or_404(Post, id=post_id)
         new_queryset = Comment.objects.filter(post=post_id)
-        if correct_post:
-            return new_queryset
-        else:
-            raise Exception(f'Нет поста c id - {post_id}')
+        return new_queryset
 
     def perform_create(self, serializer):
         post_id = self.kwargs["post_id"]
